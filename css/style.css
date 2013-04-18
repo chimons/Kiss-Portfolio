@@ -1,0 +1,826 @@
+ 
+.portfoliodetail ul li{list-style-image:url(../images/bg-arrow.png); margin-top:12px; padding:0;}
+.portfoliodetail .link-pdf{background:url(../images/bg-pdf.png) -6px 0px no-repeat; padding-left:10px; padding-right:13px;}
+.portfoliodetail .link-externe{background:url(../images/bg-externe.png) -2px 0px no-repeat; padding-left:10px; padding-right:15px;}
+.portfoliodetail .link-zip{background:url(../images/bg-zip.png) 1px 0px no-repeat; padding-left:10px; padding-right:15px;}
+.portfoliodetail .link-word{background:url(../images/bg-doc.png) 1px 0px no-repeat; padding-left:10px; padding-right:15px;}
+div.portfoliodetail {max-width:800px ; max-height:600px; padding:20px;}
+
+.download-btn {
+    background: url(../images/btn-bg.png);
+    display: block;
+    width: 100%;
+    height: 53px;
+    border: 1px solid #00568c;
+    margin: 0 0 0 0;
+    text-align: center;
+    line-height: 55px;
+
+    font-family: "MerriweatherBold", Georgia, Serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+    -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+    -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+}
+
+.bouton {
+    background: url(../images/btn-bg.png);
+    display: inline-block;
+    height: 50px;
+    border: 1px solid #00568c;
+    margin: 4px 1px;
+    text-align: center;
+    line-height: 55px;
+    font-family: "MerriweatherBold", Georgia, Serif;
+    font-size: 20px;
+    color: #ffffff  !important;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+	padding: 0 20px ;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+    -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+    -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+}
+.download-btn .small{
+font-size:0.6em;
+}
+
+#centre{
+	margin:auto;
+}
+
+
+@font-face {
+    font-family: 'MerriweatherRegular';
+    src: url('fonts/merriweather-regular-webfont.eot');
+    src: url('fonts/merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-regular-webfont.woff') format('woff'),
+         url('fonts/merriweather-regular-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-regular-webfont.svg#MerriweatherRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MerriweatherBold';
+    src: url('fonts/merriweather-bold-webfont.eot');
+    src: url('fonts/merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-bold-webfont.woff') format('woff'),
+         url('fonts/merriweather-bold-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-bold-webfont.svg#MerriweatherBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --------------------------------------
+    RESET
+----------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;	
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------------------------------------------
+    GENERAL
+---------------------------------------------------------- */
+html { overflow-y: scroll; }
+body {
+    font-family: Georgia, Serif;
+    font-size: 16px;
+    line-height: 25px;
+    color: #3B3B3B;
+    background:url(../images/bg.png) left top repeat ;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+}
+
+p { margin-bottom: 25px; }
+p.intro { font-size: 18px; }
+
+/* links */
+a:link, a:visited {
+    color: #004a82;
+    text-decoration: none;
+    outline: 0;
+}
+a:hover, a:focus, a:active {
+    color: #5E1F00;
+}
+
+div.portfoliodetail a:link, div.portfoliodetail a:visited {
+    color: #0071C6;
+    text-decoration: none;
+    outline: 0;
+}
+div.portfoliodetail a:hover, div.portfoliodetail a:focus, div.portfoliodetail a:active {
+    color: #800000;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'MerriweatherBold', Serif;
+}
+h1 {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.9px;
+    color: #00568c;
+    margin-left: -2px;
+}
+h1.titre{
+	margin-bottom:18px;
+}
+h2 {
+    font-size: 22px;
+    line-height: 25px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/* Lists */
+ul, ol {
+	padding: 0 0 0 22px;
+}
+ul { list-style: disc; }
+ol { list-style: decimal; }
+
+dl { margin-bottom: 25px; }
+dt {
+    font-weight: bold;
+    color: #00568c;
+}
+dd {
+    padding-left: 20px;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+strong, b {
+    font-weight: bold; 
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+mark {
+	display:block;
+    background-color: #8FC6FF;
+}
+
+.code{
+	font-family:"Lucida Console";
+}
+
+/* Clearing and Alignment Classes */
+.align-left {
+    float: left;
+}
+.align-right {
+    float: right;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+
+/* ------------------------------------------------------
+    STRUCTURE
+--------------------------------------------------------- */
+#header-wrap {
+    background: url(../images/header-bg.png);
+    width: 100%;
+    height: 70px;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+header {
+    position: relative;
+    width: 940px;
+    height: 70px;
+    margin: 0 auto;
+}
+.light-bg {
+    width: 100%;
+    margin: 0 auto;
+	background: url(../images/bg.png) left top repeat ;
+}
+.dark-bg {
+    width: 100%;
+    margin: 0 auto;
+	background: url(../images/bg1.png) left top repeat ;
+}
+.section-wrap {
+    width: 940px;
+    margin: 0 auto;
+}
+.content-wrap section {
+    position: relative;
+    padding: 125px 0 25px 0;
+    background: url(../images/section-sep.png) repeat-x left top;
+}
+.content-wrap section section {
+    background: none;
+    margin: 0;
+}
+.content-wrap section .row {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.content-wrap section .row .col {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 290px;
+}
+.content-wrap section .row .col .mid{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 290px;
+}
+
+.content-wrap section .row  #gauche{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+}
+.content-wrap section .row #droite{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+.content-wrap section .row .mid  {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.content-wrap section .row .right  {
+    margin-left: 39px;
+    margin-right: 0;
+}
+.content-wrap section .no-bottom-margin{
+    margin-bottom: 0;
+}
+.content-wrap section .primary {
+    float: left;
+    width: 570px;
+}
+.content-wrap section .primary p.intro {
+    /* margin: 15px 0 10px 0; */
+    margin: 15px 0 25px 0;
+}
+.content-wrap section aside { 
+float: right;
+width: 370px;
+}
+
+
+
+
+
+
+.content-wrap section .back-to-top {
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    right: 10px;
+    height: 43px;
+    width: 43px;
+    background: url(../images/back-to-top.png);
+    text-indent: -9999px;
+    z-index: 1;
+}
+.ie7 .content-wrap section .back-to-top {
+    bottom: -70px;
+}
+
+footer {
+    position: relative;
+    background: url(../images/section-sep.png) repeat-x left 25px;
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 125px;
+}
+
+/* -------------------------------------------
+    Header
+-------------------------------------------- */
+
+/* Logo */
+header hgroup {
+    position: absolute;
+    background: url(../images/logo.png) no-repeat;
+    height: 31px;
+    width: 330px;
+    display: block;
+    top: 25px;
+    left: 0;
+}
+header hgroup h1 a {
+    text-indent: -9999em;
+    display: block;
+    height: 45px;
+    width: 330px;
+}
+header hgroup h3  {
+    text-indent: -9999em;
+    height: 0;
+}
+
+/* Main Navigation */
+header nav {
+    float: right;
+    margin-top: 25px;
+}
+header nav ul {
+    font: bold 12px/25px  Helvetica, Arial, Sans-serif;
+    margin-right: -5px;
+    padding: 0;
+    list-style: none;
+}
+header nav ul li {
+    float: left;
+}
+header nav ul a:link, header nav ul a:visited {
+    color: #c5c4c4;
+    margin-right: 20px;
+    text-shadow: 0 -1px 0 rgba(10, 10, 10, 1);
+}
+header nav ul a:hover,
+header nav ul a:active {
+    color: #00B4C1
+}
+
+/* -----------------------------------------
+    Main Section
+------------------------------------------ */
+section#main {
+    width: 940px;
+    background: none;
+}
+section#main h1 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+section#main .intro-box {
+    float:left;
+    width:460px;
+    min-height: 300px;
+}
+section#main .row .col h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Slider */
+.slider-wrapper {
+    float: right;
+    position: relative;
+    background: url(../images/slider.png) no-repeat;
+    margin-top: 30px;
+    margin-bottom: 13px;
+    width: 420px;
+    height: 234px;
+}
+.slider-wrapper-form {
+    float: right;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 13px;
+    width: 460px;
+	background: url(../images/bg.png) left top repeat ;
+	padding: 5px;
+}
+
+.slider-wrapper-form label {
+	display:inline-block;
+	width:145px;
+	text-align:right;
+
+}
+.slider-wrapper-form input {
+	display:inline-block;
+	width:279px!important;
+	margin: 13px 0 0 0!important;
+}
+.slider-wrapper #slider {
+    position: absolute;
+    top: 18px;
+    left: 18.5px;
+    width: 383px; /* Make sure your images are the same size */
+    height: 198px; /* Make sure your images are the same size */
+}
+.slider-wrapper .nivoSlider {
+	position: relative;
+	background: #fff url(../images/loading.gif) no-repeat 50% 50%;
+}
+.slider-wrapper .nivoSlider img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+.slider-wrapper .nivoSlider a {
+	border: 0;
+	display: block;
+}
+.slider-wrapper .nivo-controlNav {
+	position: absolute;
+	left: 50%;
+	bottom: -45px;
+    margin-left: -30px ; /* Tweak this to center bullets */
+}
+.slider-wrapper .nivo-controlNav a {
+	display: block;
+	width: 13px;
+	height: 14px;
+	background: url(../images/bullets.png) no-repeat;
+	text-indent: -9999px;
+	border: 0;
+	margin-right: 10px;
+	float: left;
+}
+.slider-wrapper .nivo-controlNav a.active {
+	background-position: 0 -14px;
+}
+.slider-wrapper .nivo-directionNav a {
+	display: block;
+	width: 33px;
+	height: 52px;
+	background: url(../images/arrows.png) no-repeat;
+	text-indent: -9999px;
+	border: 0;
+}
+.slider-wrapper a.nivo-nextNav {
+	background-position: -33px 0;
+	right: -50px;
+    top: 70px;
+}
+.slider-wrapper a.nivo-prevNav {
+	left: -48.5px;
+    top: 70px;
+}
+.slider-wrapper .nivo-caption {
+    /* font-family: Helvetica, Arial, sans-serif; */
+    padding: 5px 10px;
+    width: 363px;
+    font-size: 12px;
+    text-shadow: none;
+    text-align: center;
+}
+.slider-wrapper .nivo-caption p {
+    text-shadow: none;
+    color: #CBCBCB;
+}
+.slider-wrapper .nivo-caption a {
+    color: #66CC33;
+    /* border-bottom: 1px dotted #fff; */
+}
+.slider-wrapper .nivo-caption a:hover {
+    color:#fff;
+}
+
+/* -----------------------------------------
+   Services
+------------------------------------------- */
+section#services h1 {
+   margin: 0 0 25px 0;
+}
+section#services .row .col img.align-left {
+    margin-top: 13px;
+    margin-right: 12px;
+}
+
+/* ---------------------------------------
+    Portfolio
+----------------------------------------- */
+section#portfolio ul.folio-list {
+    margin: 25px 0;
+    padding: 0;
+    width: 970px;
+    list-style: none;
+}
+section#portfolio ul.folio-list li {
+    float: left;
+    margin-right: 29px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 294px;
+    height: 230px;
+    max-height: 250px;
+}
+section#portfolio ul.folio-list li .thumb {
+    margin: 0 0 5px 0;
+    padding: 0;
+    background: url(../images/thumb-frame.png) no-repeat;
+    width: 294px;
+    height: 205px;
+}
+section#portfolio ul.folio-list li .thumb img {
+    margin-top: 18px;
+    margin-left: 18px;
+}
+section#portfolio ul.folio-list li h3.entry-title {
+    font-size: 14px;
+    line-height: 25px;
+    margin-left: 16px;
+}
+
+
+section aside .download-btn {
+    background: url(../images/btn-bg.png);
+    display: block;
+    height: 53px;
+    border: 1px solid #00568c;
+    margin: 0 0 20px 0;
+    text-align: center;
+    line-height: 55px;
+
+    font-family: "MerriweatherBold", Georgia, Serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+    -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+    -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+}
+
+/* ---------------------------------------------------
+    Contact
+----------------------------------------------------- */
+ form.normal {
+    width: 470px;
+    background: url(../images/form-bg.png);
+    margin: 0 0 25px 0;
+    padding: 50px 40px 50px 40px;
+}
+
+form.large {
+    width: 100%;
+    background: url(../images/form-bg.png);
+    margin: 0 0 25px 0;
+    padding: 50px 40px 50px 40px;
+}
+form.large input, form.large textarea{
+    width: 90%;
+    margin: 0;
+    padding: 10px;
+}
+
+form.large label{
+   
+    margin:10px, 0;
+    padding: 5px;
+}
+
+
+form.large textarea#intro{
+	height:200px;
+}
+
+form .intro-box{
+	margin: 0 0 20px 0;
+}
+
+div.panneau {
+    width: 470px;
+    background: url(../images/form-bg.png);
+    margin: 0 0 25px 0;
+    padding: 50px 40px 50px 40px;
+}
+
+form h2{
+	margin-top:0;
+}
+.panneau h2{
+	margin-top:0;
+}
+aside h2{
+	margin-top:0;
+}
+ form p {
+	font-family: "MerriweatherBold", Serif;
+    font-size: 12px;
+}
+ form label {
+    display: block;
+    font-family: "MerriweatherBold", Serif;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 0 5px 0;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+}
+
+label.checkbox-lbl{
+	display:inline-block;
+}
+
+input.checkbox{
+	margin:0 0 0 6px;
+}
+
+ form label span {
+    color: #046416;
+}
+form input,
+form select,
+form textarea {
+
+    margin-bottom: 20px;
+	padding: 9px 10px;
+    color: #373737;
+    background: #cbcbcb;
+	border-width: 1px;
+	border-style: solid;
+  	border-color: #b8b8b8 #EBEBEB #EBEBEB #b8b8b8;
+	font: 15px Helvetica, Arial, Sans-serif;
+
+    -moz-box-shadow:inset 0 3px 1px rgba(0, 0, 0, .1);
+    -webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, .1);
+    box-shadow:inset 0 1px 3px rgba(0, 0, 0, .1);
+}
+form textarea {
+    height: 300px;
+}
+
+ form input:focus,
+ form select:focus,
+ form textarea:focus {
+	background: #F0F0F0;
+}
+form input.button {
+   	height: 38px;
+	margin: 2px 0 10px 0;
+	background: #1F8532 url(../images/btn-bg.png);
+    border: 1px solid #00568c;
+    font-family: "MerriweatherBold", Georgia, Serif;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+	float:right;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+    -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+    -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
+}
+form input#accueil { 
+	margin: 10px ;
+	width:100% !important;
+}
+.ligne {
+	width:450px;
+}
+
+.link-list li a { 
+color: #3B3B3B;
+display: block;
+padding-bottom: 3px;
+padding-top: 3px;
+}
+
+.link-list li { 
+background: url("../images/section-sep.png") 0% 100% repeat-x transparent;
+padding-left: 3px;
+}
+
+.link-list li a:hover, .link-list li a:focus, .link-list li a:active { 
+color: #4F9EFF;
+}
+
+ul.categorie{
+	padding:0 !important;
+}
+
+ li.categorie{
+    font-size: 20px;
+    margin: 25px  0 0 0 ;
+    padding: 0;
+    list-style: none;
+}
+
+li.rubrique {
+    font-size: 15px;
+    margin: 0 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+li.article {
+    font-size: 11px;
+    margin: 0 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* ----------------------------------------------------
+    Footer
+----------------------------------------------------- */
+#footer p.footer-text {
+    font-family: "MerriweatherRegular", Serif;
+    font-size: .75em;
+    padding: 0 10px;
+    margin-bottom: 0;
+    clear: both;
+}
+footer p.footer-text {
+    font-family: "MerriweatherRegular", Serif;
+    font-size: .75em;
+    padding: 0 10px;
+    margin-bottom: 0;
+    clear: both;
+}
+footer .footer-content {
+    position: relative;
+    width: 900px;
+    top: -83px;
+}
+footer ul.footer-menu {
+    float: left;
+    margin: 20px 0 5px -3px;
+    padding: 0;
+    list-style: none;
+}
+footer  ul.footer-menu li {
+    float: left;
+}
+footer  ul.footer-menu li a {
+    display: block;
+    font-family: "MerriweatherBold", Serif;
+    font-size: .75em;
+    line-height: 1em;
+    color: #3B3B3B;
+    padding: 1px 12px;
+    border-left:  1px  solid #ADADAD;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+}
+footer  ul.footer-menu li a:hover,
+footer  ul.footer-menu li a:focus,
+footer  ul.footer-menu li a:active {
+    color: #285935;
+}
+
+footer  ul.footer-menu li:first-child a {
+    border: none;
+}
+
