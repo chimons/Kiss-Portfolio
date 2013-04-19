@@ -13,7 +13,7 @@ class medoo
 /* END MEDOO */
 
 
-$database = new medoo('m/database.vide.sqlite');
+$database = new medoo('m/database.sqlite');
 
 function get_categories(){
 	try{
