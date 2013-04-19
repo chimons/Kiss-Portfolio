@@ -137,7 +137,7 @@ $infos=get_infos();
 			<li><a href="#portfolio">Portfolio</a></li>
 			<!--<li><a href="#cv">CV</a></li>-->
 		</ul>
-		<p class="footer-text"<a href="http://chimon.fr/kiss-portfolio">Kiss Portfolio by <a href="http://github.com/chimons">Chimon S.</a>. Design by <a href="http://www.Styleshout.com">E. Aligam</a></p> 
+		<p class="footer-text"><a href="http://kiss-portfolio.chimon.fr">Kiss Portfolio by <a href="http://github.com/chimons">Chimon S.</a>. Design by <a href="http://www.Styleshout.com">E. Aligam</a></p> 
 		<p class="footer-text"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="images/cc-by-sa.png"/></a> L'ensemble du contenu de ce site est mis à disposition selon les termes de la licence <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr" target="_blank">Creative Commons by-SA 3.0</a>.</p>
 	</div>
 
