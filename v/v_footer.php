@@ -30,7 +30,7 @@
 		
 	<div id="footer">
 	
-		<p class="footer-text">Kiss Portfolio by <a href="mailto:support@chimon.fr">Chimon Sultan</a></p> 
+		<p class="footer-text"><a href="http://chimon.fr/kiss-portfolio">Kiss Portfolio by <a href="http://github.com/chimons">Chimon S.</a></p> 
 	
 </div>		
 </div>
