@@ -1,9 +1,10 @@
-<?php 
+<?php
 session_start();
+
+
 require_once('m/Bdd.php');
 $texte=get_texte_accueil();
 include('v/v_header.php');
-include('v/static.php');
 
 $infos=get_infos();
 

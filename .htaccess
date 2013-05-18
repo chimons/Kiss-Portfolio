@@ -1,0 +1,12 @@
+#Augmenter la limite d'upload par defaut
+php_value upload_max_filesize 15M
+php_value post_max_size 15M
+php_value max_execution_time 200
+php_value max_input_time 200
+
+
+#Empecher le telechargement de la base de donnee (fichier .sqlite)
+<Files ~ "\.sqlite$">
+    Order allow,deny
+    Deny from all
+</Files>

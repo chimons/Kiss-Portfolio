@@ -1,10 +1,11 @@
 
 	
 	<?php
-	if (isset($message)){
+	if (!empty($messages)){
+		foreach ($messages as $msg){
 	?>
-	<h3><mark><?php echo $message ?></mark></h3>
-	<?php } ?>
+		<h3><mark><?php echo $msg ?></mark></h3>
+	<?php } }?>
 	
 	<h1>Articles</h1>
 			<aside>
@@ -12,10 +13,24 @@
 			</aside>
             <div class="primary">
 				<?php switch ($action){
+					case "invite_ajouter_rubrique";
+				?>
+					<div class="panneau">
+					<div>
+						
+						<h3>Le portfolio ne contient aucune rubrique.</h3>
+						<p>Vous devez <a href="admin.php?module=rubriques&ajouter">créer une rubrique</a> avant de pouvoir ajouter des articles.</p>
+						<a href="?module=rubriques&ajouter" class="download-btn">Nouvelle rubrique</a>
+					</div>
+					</div>
+						
+				
+				<?php
+					break;
 					case "ajouter": 
 					case "modifier":
 				?>
-				<form method="post" action="#" class="normal">
+				<form method="post" action="#" class="normal"  enctype="multipart/form-data">
 					<div>
 						<h2><?php echo ($action=="ajouter" ? "Nouvel article" :  "Editer l'article"); ?></h2>
 					</div>
@@ -32,9 +47,13 @@
 						<label for="titre">Titre de l'article</label>
 						<input name="titre" id="titre" class="ligne" type="text" value="<?php echo $titre ?>" required/> 
 					</div>
-					<div>		
-						<label for="url">Adresse du lien (Chemin absolu)<label>
-						<input name="url" id="url" class="ligne" type="text" value="<?php echo $url ?>" required/> 
+					<div id="externe">		
+						<label for="url">Adresse du lien<label>
+						<input name="url" id="url" class="ligne" type="text" value="<?php echo $url ?>" /> 
+					</div>
+					<div id="doc">		
+						<label for="document">Document (Formats acceptés : pdf, doc, docx, odt, jpg, png, gif. Taille max <?php echo taille_max_upload() ?> mo)</label>
+						<input name="document" id="document" class="ligne" type="file" /> 
 					</div>
 					<div>
 						<label  for="type_lien">Type de lien</label>
@@ -47,7 +66,7 @@
 					</div>
 					<div>
 						<label  for="texte">Texte d'explication</label>
-						<textarea name="texte" id="texte" class="ligne" required><?php echo $titre ?></textarea> 
+						<textarea name="texte" id="texte" class="ligne" required><?php echo $texte ?></textarea> 
 						<p>Vous pouvez utiliser les balises HTML pour le formattage du texte.</p>
 					</div>
 					<div>
@@ -55,6 +74,7 @@
 						<input name="active" id="active" class="checkbox" type="checkbox" <?php echo ($active==1? "checked" : "")?> />
 					</div>
 					<div>	  
+						<input type="hidden" name="MAX_FILE_SIZE" value="15" />
 						<input type="hidden" name="poste" value="true" />
 						<?php if ($action=="modifier"){?><input type="hidden" name="id" value="<?php echo $le_article['id_article'] ?>" /><?php } ?>
 						<input type="hidden" name="action" value="<?php echo ($action=="ajouter" ? "ajouter" :  "modifier"); ?>" />
@@ -64,23 +84,17 @@
 				<?php break; ?>
 				
 				<?php case "consulter" :  ?>
+				
+				
+						
 				<div class="panneau">
 					<div>
 						<p>
-							<h3>Rubrique : <?php echo $titre_rubrique_parente ?></h3>
+							<h3>Rubrique parente : <?php echo $titre_rubrique_parente ?></h3>
 						</p>
 						<p>
-							<h2><?php echo $le_article['art_titre'] ?> (<?php if($le_article['active']) echo "Publié"; else echo "Non publié";?>)</h2>
-						</p>
-						<p>
-							URL : <?php echo $le_article['art_url'] ?>
-						</p>
-						<p>
-							Type de lien : <?php echo $libelle_type_lien ?>
-						</p>
-						<p>
-							<?php echo $le_article['art_texte'] ?>
-						</p>
+						<a href="<?php echo $le_article['art_url'];?>" target="_blank"><?php echo $le_article['art_titre'];?></a><span class="link-<?php echo $le_article['art_type_lien'];?>"></span><br />
+										<p><?php echo $le_article['art_texte'];?></p>
 						
 						
 						<p>

@@ -1,9 +1,10 @@
  
 .portfoliodetail ul li{list-style-image:url(../images/bg-arrow.png); margin-top:12px; padding:0;}
-.portfoliodetail .link-pdf{background:url(../images/bg-pdf.png) -6px 0px no-repeat; padding-left:10px; padding-right:13px;}
-.portfoliodetail .link-externe{background:url(../images/bg-externe.png) -2px 0px no-repeat; padding-left:10px; padding-right:15px;}
-.portfoliodetail .link-zip{background:url(../images/bg-zip.png) 1px 0px no-repeat; padding-left:10px; padding-right:15px;}
-.portfoliodetail .link-word{background:url(../images/bg-doc.png) 1px 0px no-repeat; padding-left:10px; padding-right:15px;}
+.link-pdf{background:url(../images/bg-pdf.png) -6px 0px no-repeat; padding-left:10px; padding-right:13px;}
+.link-externe{background:url(../images/bg-externe.png) -2px 0px no-repeat; padding-left:10px; padding-right:15px;}
+.link-zip{background:url(../images/bg-zip.png) 1px 0px no-repeat; padding-left:10px; padding-right:15px;}
+.link-word{background:url(../images/bg-doc.png) 1px 0px no-repeat; padding-left:10px; padding-right:15px;}
+.link-image{background:url(../images/bg-image.png) 1px 0px no-repeat; padding-left:10px; padding-right:15px;}
 div.portfoliodetail {max-width:800px ; max-height:600px; padding:20px;}
 
 .download-btn {
@@ -18,7 +19,7 @@ div.portfoliodetail {max-width:800px ; max-height:600px; padding:20px;}
 
     font-family: "MerriweatherBold", Georgia, Serif;
     font-size: 20px;
-    color: #ffffff;
+    color: #ffffff!important;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
 
     box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 1px 0 #5181a6;
@@ -302,13 +303,13 @@ header {
     float: left;
     margin: 0;
     padding: 0;
-    width: 280px;
+    width: 290px;
 }
 .content-wrap section .row #droite{
     float: left;
     margin: 0;
     padding: 0;
-    width: 300px;
+    width: 290px;
 }
 .content-wrap section .row .mid  {
     margin-left: 35px;

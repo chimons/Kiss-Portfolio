@@ -82,6 +82,33 @@ function get_une_categorie($id_cat){
 	return $la_categorie;
 }
 
+
+function get_url_document_article($id){
+	try{
+	global $database;
+	$image=$database->get("articles", "art_url", array("id_article"=>$id));
+	}
+	catch(Exception $e)
+	{
+		echo 'Echec de la recuperation de l\'url de l\'image';
+		exit();
+	}
+	return $image;
+}
+
+function get_nom_image_rubrique($id){
+	try{
+	global $database;
+	$image=$database->get("rubriques", "rub_image", array("id_rubrique"=>$id));
+	}
+	catch(Exception $e)
+	{
+		echo 'Echec de la recuperation de l\'url de l\'image';
+		exit();
+	}
+	return $image;
+}
+
 function supprimer_une_categorie($id){
 	try{
 	global $database;
@@ -157,7 +184,7 @@ function get_libelle_type_lien($code){
 function get_titre_rubrique($id_rub){
 	try{
 	global $database;
-	$la_categorie=$database->get("rubriques", "rub_titre", array("id_rub"=>$id_rub));
+	$titre=$database->get("rubriques", "rub_titre", array("id_rubrique"=>$id_rub));
 	//echo $database->last_query();
 	}
 	catch(Exception $e)
@@ -165,7 +192,7 @@ function get_titre_rubrique($id_rub){
 		echo 'Echec de la recuperation de la categories';
 		exit();
 	}
-	return $la_categorie;
+	return $titre;
 }
 
 function ajouter_categorie($titre, $chapeau, $active){
@@ -176,6 +203,32 @@ function ajouter_categorie($titre, $chapeau, $active){
 	catch(Exception $e)
 	{
 		echo 'Echec à l ajout de categorie';
+		exit();
+	}
+	return $insertion;
+}
+
+function modifier_image_rubrique($id, $image){
+	try{
+	global $database;
+	$insertion=$database->update("rubriques", array("rub_image"=>$image), array("id_rubrique"=>$id));
+	}
+	catch(Exception $e)
+	{
+		echo 'Echec';
+		exit();
+	}
+	return $insertion;
+}
+
+function modifier_lien_article($id, $lien){
+	try{
+	global $database;
+	$insertion=$database->update("articles", array("art_url"=>$lien), array("id_article"=>$id));
+	}
+	catch(Exception $e)
+	{
+		echo 'Echec';
 		exit();
 	}
 	return $insertion;
@@ -194,10 +247,10 @@ function modifier_categorie($id, $titre, $chapeau, $active){
 	return $insertion;
 }
 
-function ajouter_rubrique($id_cat, $titre, $texte, $vignette, $active){
+function ajouter_rubrique($id_cat, $titre, $texte, $image, $active){
 	try{
 	global $database;
-	$insertion=$database->insert("rubriques", array("id_cat"=>$id_cat, "rub_titre"=>$titre, "rub_texte"=>$texte, "rub_image"=>$vignette, "active"=>$active));
+	$insertion=$database->insert("rubriques", array("id_cat"=>$id_cat, "rub_titre"=>$titre, "rub_texte"=>$texte, "rub_image"=>$image, "active"=>$active));
 	}
 	catch(Exception $e)
 	{
@@ -207,10 +260,10 @@ function ajouter_rubrique($id_cat, $titre, $texte, $vignette, $active){
 	return $insertion;
 }
 
-function modifier_rubrique($id, $id_cat, $titre, $texte, $vignette, $active){
+function modifier_rubrique($id, $id_cat, $titre, $texte, $active){
 	try{
 	global $database;
-	$insertion=$database->update("rubriques", array("id_cat"=>$id_cat, "rub_titre"=>$titre, "rub_texte"=>$texte, "rub_image"=>$vignette, "active"=>$active), array("id_rubrique"=>$id));
+	$insertion=$database->update("rubriques", array("id_cat"=>$id_cat, "rub_titre"=>$titre, "rub_texte"=>$texte, "active"=>$active), array("id_rubrique"=>$id));
 	}
 	catch(Exception $e)
 	{
@@ -220,10 +273,10 @@ function modifier_rubrique($id, $id_cat, $titre, $texte, $vignette, $active){
 	return $insertion;
 }
 
-function ajouter_article($id_rubrique, $titre, $url, $art_type_lien, $texte, $active){
+function ajouter_article($id_rubrique, $titre, $art_type_lien, $texte, $active){
 	try{
 	global $database;
-	$insertion=$database->insert("articles", array("id_rubrique"=>$id_rubrique, "art_titre"=>$titre, "art_url"=>$url, "art_type_lien"=>$art_type_lien, "art_texte"=>$texte, "active"=>$active));
+	$insertion=$database->insert("articles", array("id_rubrique"=>$id_rubrique, "art_titre"=>$titre, "art_type_lien"=>$art_type_lien, "art_texte"=>$texte, "active"=>$active));
 	}
 	catch(Exception $e)
 	{
@@ -233,10 +286,10 @@ function ajouter_article($id_rubrique, $titre, $url, $art_type_lien, $texte, $ac
 	return $insertion;
 }
 
-function modifier_article($id, $id_rubrique, $titre, $url, $art_type_lien, $texte, $active){
+function modifier_article($id, $id_rubrique, $titre, $art_type_lien, $texte, $active){
 	try{
 	global $database;
-	$insertion=$database->update("articles", array("id_rubrique"=>$id_rubrique, "art_titre"=>$titre, "art_url"=>$url, "art_type_lien"=>$art_type_lien, "art_texte"=>$texte, "active"=>$active), array("id_article"=>$id));
+	$insertion=$database->update("articles", array("id_rubrique"=>$id_rubrique, "art_titre"=>$titre, "art_type_lien"=>$art_type_lien, "art_texte"=>$texte, "active"=>$active), array("id_article"=>$id));
 	}
 	catch(Exception $e)
 	{

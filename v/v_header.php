@@ -5,7 +5,7 @@
 	<meta name="description" content="Portofolio de Chimon S.">
 	<meta name="author" content="CHS">
 	<meta name="robots" content="noindex">
-	<title>Chimon Sultan | Portfolio BTS SIO</title>
+	<title>Kiss Portfolio | your simplest portfolio</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
 	<link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" />

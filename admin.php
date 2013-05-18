@@ -1,9 +1,13 @@
 <?php
+
+session_start();
+
+
 $identifiant="admin";
 $mot_de_passe="admin";
 
-session_start();
 require_once("m/Bdd.php");
+require_once("util/util.php");
 
 if (isset($_POST['login']) AND isset($_POST['password']) AND $_POST['login']==$identifiant AND $_POST['password']==$mot_de_passe ){
 		$_SESSION['logged']=TRUE;

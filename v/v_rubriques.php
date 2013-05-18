@@ -1,9 +1,10 @@
 
 	<?php
-	if (isset($message)){
+	if (!empty($messages)){
+		foreach ($messages as $msg){
 	?>
-	<h3><mark><?php echo $message ?></mark></h3>
-	<?php } ?>
+		<h3><mark><?php echo $msg ?></mark></h3>
+	<?php } }?>
 	
 	<h1>Rubriques</h1>
 		<aside>
@@ -12,10 +13,24 @@
 		   <div class="primary">
 			
 				<?php switch ($action){
+					case "invite_ajouter_categorie";
+				?>
+					<div class="panneau">
+					<div>
+						
+						<h3>Le portfolio ne contient aucune catégorie.</h3>
+						<p>Vous devez <a href="admin.php?module=categories&ajouter">créer une catégorie</a> avant de pouvoir ajouter une rubrique.</p>
+						<a href="?module=categories&ajouter" class="download-btn">Nouvelle catégorie</a>
+					</div>
+					</div>
+						
+				
+				<?php
+					break;
 					case "ajouter": 
 					case "modifier":
 				?>
-				<form method="post" action="#"  class="normal">
+				<form method="post" action="#"  class="normal"  enctype="multipart/form-data">
 					<div>
 						<h2><?php echo ($action=="ajouter" ? "Nouvelle rubrique" :  "Editer la rubrique"); ?></h2>
 					</div>
@@ -31,16 +46,17 @@
 					</div>
 					<div>		
 						<label for="titre">Titre de la rubrique</label>
-						<input name="titre" id="titre" class="ligne" type="text" value="<?php echo $titre ?>" required/> 
+						<input name="titre" id="titre" class="ligne" type="text" value="<?php echo $titre ?>" required /> 
 					</div>
 					<div>
 						<label  for="texte">Texte (Texte de présentation de la rubrique)</label>
-						<textarea name="texte" id="texte" class="ligne" required><?php echo $texte ?></textarea> 
-						<p>Vous pouvez utiliser les balises HTML pour le formattage du texte.</p>
+						<textarea name="texte" id="texte" class="ligne" required ><?php echo $texte ?></textarea> 
+						<p style="margin-top:-15px">Vous pouvez utiliser les balises HTML pour le formattage du texte.</p>
 					</div>
 					<div>		
-						<label for="vignette">Nom de l'image (Les images doivent être placées dans le dossier /images/thumbs et doivent être de 258x168px. N'oubliez pas l'extension)</label>
-						<input name="vignette" id="vignette" class="ligne" type="text" value="<?php echo $vignette ?>" required/> 
+						<label for="miniature">Miniature (Taille max <?php echo taille_max_upload() ?> mo)</label>
+						<input name="miniature" id="miniature" class="ligne" type="file" /> 
+						<p style="margin-top:-15px">Laissez vide pour utiliser l'image par défaut.</p>
 					</div>
 					<div>
 						<label for="active" class="checkbox-lbl">Publier sur le portfolio? </label>
@@ -48,6 +64,7 @@
 					</div>
 					<div>	  
 						<input type="hidden" name="poste" value="true" />
+						<input type="hidden" name="MAX_FILE_SIZE" value="15" />
 						<?php if ($action=="modifier"){?><input type="hidden" name="id" value="<?php echo $la_rubrique['id_rubrique'] ?>" /><?php } ?>
 						<input type="hidden" name="action" value="<?php echo ($action=="ajouter" ? "ajouter" :  "modifier")?>" />
 						<input type="submit" class="button" value="Valider" />
