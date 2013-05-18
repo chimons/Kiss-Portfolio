@@ -44,6 +44,7 @@
 <li>Interface claire</li>
 <li>Gestion complète de catégories, rubriques et articles</li>
 <li>Page de présentation</li>
+<li>Upload des documents</li>
 <li>Facilement personnalisable</li>
 </ul><h2>Fonctionnalités à venir</h2>
 
@@ -51,6 +52,17 @@
 <li>Gestion de l'ordre d'affichage des éléments</li>
 <li>Edition du texte WYSIWYG</li>
 <li>Utilisation d'un moteur de template pour faciliter la personnalisation du front office (probablement <a href="http://www.raintpl.com/">RainTPL</a>)</li>
+</ul><h2>Attention</h2>
+
+<h4>Kiss Portfolio est actuellement en phase de développement.</h4>
+
+<p>Ceci implique (pour l'instant) les limitations suivantes : </p>
+
+<ul>
+<li>Sur un serveur Linux, vous devrez donner manuellement les droits d'écriture au serveur web sur la base de données (le fichier m/database.sql), sur le dossier documents et sur le dossier images/thumbs</li>
+<li>Les identifiants de connexion sont définis aux premières lignes du fichier <em>admin.php</em> (par défaut : admin-admin).</li>
+<li>Les miniatures du slider doivent être téléchargées manuellement. </li>
+<li>Il y a probablement des bugs. Je vous serais reconnaissant de m'en faire part. </li>
 </ul><h2>Configuration requise</h2>
 
 <p>Kiss Portfolio fonctionne correctement sur avec PHP 5.3. Je n'ai pas testé les versions antérieures mais il est probable qu'il fonctionne correctement avec des configurations plus anciennes. </p>
@@ -66,11 +78,7 @@ Cependant, je vous recommande vivement la souscription à une offre payante, il 
 <li>Téléchargez la dernière version de Kiss Portfolio</li>
 <li>Décompressez l'archive dans le répertoire www de votre serveur </li>
 <li>Accédez au portfolio via votre navigateur, connectez vous à l'espace Admin et commencez à remplir votre portfolio.</li>
-</ol><h5>Attention !</h5>
-
-<p>Kiss Portfolio est actuellement en phase de développement. Les identifiants de connexion sont définis aux premières lignes du fichier <em>admin.php</em> (par défaut : admin-admin).</p>
-
-<h2>Documentation</h2>
+</ol><h2>Documentation</h2>
 
 <p>Je n'ai pour l'instant rédigé aucune documentation. Cependant, si l'envie vous prend, vous pouvez jeter un œil au code source, bien que pas commenté, il est très explicite simple à appréhender.  </p>
 
@@ -97,18 +105,7 @@ Vous pouvez contribuer à son développement en proposant des fonctionnalités, 
       </footer>
     </div>
 
-    <!-- Piwik --> 
- <script type="text/javascript">
- var pkBaseURL = (("https:" == document.location.protocol) ? "https://chimon.fr/stats/" : "http://chimon.fr/stats/");
- document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
- </script><script type="text/javascript">
- try {
- var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
- piwikTracker.trackPageView();
- piwikTracker.enableLinkTracking();
- } catch( err ) {}
- </script><noscript><p><img src="http://chimon.fr/stats/piwik.php?idsite=5" style="border:0" alt="" /></p></noscript>
- <!-- End Piwik Tracking Code -->
+    
 
   </body>
 </html>
